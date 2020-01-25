@@ -7,7 +7,7 @@ import {  User } from 'firebase';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'qservus';
+  title = 'QServus';
   usuario: User;
   cargando: boolean = true;
   constructor(private afAuth: AngularFireAuth)

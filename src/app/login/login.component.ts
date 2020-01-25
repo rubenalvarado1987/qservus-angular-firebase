@@ -11,10 +11,11 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class LoginComponent implements OnInit {
   formularioLogin: FormGroup;
   datosCorrectos: boolean = true;
-  textoError: string = ''
-  constructor(private creadorFormulario: FormBuilder, private afAuth: AngularFireAuth,
-    private spinner: NgxSpinnerService
-    ) { }
+  textoError: string = '';
+  constructor(private creadorFormulario: FormBuilder,
+              private afAuth: AngularFireAuth,
+              private spinner: NgxSpinnerService
+              ) { }
 
   ngOnInit() {
     this.formularioLogin = this.creadorFormulario.group({
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.spinner.show();
       this.afAuth.auth.signInWithEmailAndPassword(this.formularioLogin.value.email, this.formularioLogin.value.password)
       .then((usuario)=>{
-        console.log(usuario)
+        //console.log(usuario)
         this.spinner.hide();
       }).catch((error)=>{
         this.datosCorrectos = false;

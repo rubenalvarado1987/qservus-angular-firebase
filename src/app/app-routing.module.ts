@@ -5,13 +5,13 @@ import { ListadoInscripcionesComponent } from './listado-inscripciones/listado-i
 
 const routes: Routes = [
   {
-    path:'', redirectTo: 'inscripcion', pathMatch: 'full'
+    path: '', redirectTo: 'listado-inscripciones', pathMatch: 'full'
   },
   {
     path: 'inscripcion', component: InscripcionComponent
   },
   {
-    path:'listado-inscripciones', component: ListadoInscripcionesComponent
+    path: 'listado-inscripciones', component: ListadoInscripcionesComponent
   }
 ];
 

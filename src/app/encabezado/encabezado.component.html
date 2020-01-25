@@ -1,25 +1,27 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">qservus</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
+  <a class="navbar-brand" href="#"><img src="assets/logo.png" width="50px;" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto" >
-            
-            <li class="nav-item active">
-              <a class="nav-link" routerLink="/">Incripción <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" routerLink="/listado-inscripciones">Ver Incripciones <span class="sr-only"></span></a>
-            </li>
 
-          </ul>
-        </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
 
-        <button class="btn btn-danger" (click)="logout()">Salir</button>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/listado-inscripciones">Listado de Compromisos<span class="sr-only"></span></a>
+      </li>
 
-   
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/inscripcion">Incripción de Compromiso<span class="sr-only"></span></a>
+      </li>
+
+    </ul>
+  </div>
+
+  <button class="btn btn-danger" (click)="logout()">Salir</button>
+
+
 </nav>
