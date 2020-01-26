@@ -11,11 +11,13 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class ListadoInscripcionesComponent implements OnInit {
   inscripciones: any[] = [];
   constructor(private db: AngularFirestore,
-              private spinner: NgxSpinnerService) { }
+              private spinner: NgxSpinnerService) { 
+                
+              }
 
   ngOnInit() {
-    this.inscripciones.length = 0;
     this.spinner.show();
+    this.inscripciones.length = 0;
     this.db.collection('compromisos').get().subscribe((resultado) => {
         
       this.spinner.hide();
