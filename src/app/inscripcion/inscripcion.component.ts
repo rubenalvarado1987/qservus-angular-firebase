@@ -22,7 +22,7 @@ export class InscripcionComponent implements OnInit {
   ngOnInit() {
 
     this.formularioInscripcion = this.creadorFormulario.group({
-      fecha_creacion: ['', Validators.required],
+      fecha_creacion: new Date(),
       fecha_entrega: ['', Validators.required],
       nombre_responsable: ['', Validators.required],
       descripcion: ['', Validators.required]

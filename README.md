@@ -3,9 +3,14 @@ Proyecto generado generado con Angular version 8
 Prueba de fundamentos de angular
 Autor: Ruben Alvarado
 
-## Instalación
+## Installation
 Run `npm install`
-y por ultimo ejecutar el `ng serve --o` 
+to next `ng serve --o` 
 
 ## Firebase
 Se debe configur en la variables de entorno: enviroments.ts
+se incluye cuenta personal de firebase.
+
+## User Demo
+Usuario: admin@qservus.com
+Clave: 123456
