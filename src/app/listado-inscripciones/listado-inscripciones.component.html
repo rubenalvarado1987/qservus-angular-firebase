@@ -1,27 +1,15 @@
+
 <div class="container">
+  <h4>Listado de Compromisos</h4>
 
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Fecha de Creación</th>
-            <th scope="col">Fecha Comprometida</th>
-            <th scope="col">Nombre Responsable</th>
-            <th scope="col">Descripción</th>
-            
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let inscripcion of inscripciones">
-            <td>{{inscripcion.fecha_creacion | date}}</td>
-            <td>{{inscripcion.fecha_entrega | date}}</td>
-            <td>{{inscripcion.nombre_responsable }}</td>
-            <td>{{inscripcion.descripcion }}</td>
-            
-          </tr>
+  <!-- <app-table [inscripciones]="inscripciones"></app-table> -->
+  <ngx-datatable class="material"
+        [rows]="rows"
+        [columns]="columns"
+        >
+  </ngx-datatable>
 
-        </tbody>
-      </table>
 </div>
 <ngx-spinner bdOpacity=0.9 bdColor="#fff" size="medium" color="grey" type="ball-spin" [fullScreen]="false">
-  <p style="color: white"> Cargando listado de compromisos... </p>
+  <p style="color: white"></p>
 </ngx-spinner>

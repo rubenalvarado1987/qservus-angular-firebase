@@ -1,29 +1,24 @@
 <div class="container mt-5">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="formulario col-sm-12">
 
             <form [formGroup]="formularioInscripcion">
-                <!-- <div class="from-control">
-                    <label for="">Fecha Creación</label>
-                    <input formControlName="fecha_creacion" class="form-control" type="text" >
-                </div> -->
-                <div class="from-control">
-                    <label for="">Fecha de Entrega</label>
-                    <input formControlName="fecha_entrega" class="form-control" type="text" >
-                </div>
-    
-                <div class="from-control">
-                    <label for="">Nombre del Responsable</label>
-                    <input formControlName="nombre_responsable" class="form-control" type="text" >
-                </div>
-    
-                <div class="from-control">
-                    <label for="">Descripción</label>
-                    <input formControlName="descripcion" class="form-control"  type="text" >
-                </div>
-
+                <!-- TODO: formato nacional -->
+                <mat-form-field>
+                    <input formControlName="fecha_entrega" matInput [matDatepicker]="picker" placeholder="Fecha de Entrega">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
                 <br>
-            <button class="btn btn-primary" (click)="guardar()" [disabled]="!formularioInscripcion.valid" >Guardar</button>
+                <mat-form-field class="example-full-width">
+                    <input formControlName="nombre_responsable" matInput placeholder="Nombre del Responsable" value="">
+                </mat-form-field>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <textarea formControlName="descripcion" matInput placeholder="Descripción"></textarea>
+                </mat-form-field>
+                <br>
+                <button class="btn btn-primary" (click)="guardar()" [disabled]="!formularioInscripcion.valid" >Guardar</button>
 
             </form>
           

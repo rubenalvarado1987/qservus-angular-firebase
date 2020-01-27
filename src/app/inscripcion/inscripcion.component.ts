@@ -4,6 +4,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { MensajesService } from '../services/mensajes.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-inscripcion',
@@ -17,7 +18,9 @@ export class InscripcionComponent implements OnInit {
   constructor(private db: AngularFirestore,
               private msj: MensajesService,
               private creadorFormulario: FormBuilder,
-              private spinner: NgxSpinnerService) { }
+              private spinner: NgxSpinnerService,
+              private router: Router,
+              private _activateRoute: ActivatedRoute) { }
 
   ngOnInit() {
 
@@ -39,6 +42,7 @@ export class InscripcionComponent implements OnInit {
           this.spinner.hide();
           //console.log('save: ', resultado);
           this.msj.mensajeCorrecto('Guardado', 'Se guardo correctamente');
+          this.router.navigate(['listado-inscripciones']);
         }).catch((error)=>{
           this.msj.mensajeError('Error', 'No se guardo el registro');
           this.spinner.hide();
